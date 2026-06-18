@@ -1,0 +1,124 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 236 86% 55%; /* Blue-600ish */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 271 81% 56%; /* Purple-600ish */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 236 86% 55%;
+    --radius: 0.75rem;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans KR', sans-serif;
+  }
+}
+
+@layer components {
+  .form-field {
+    @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm focus:border-blue-600 focus:outline-none focus:ring-1 focus:ring-blue-600;
+  }
+
+  .form-select {
+    @apply form-field h-10;
+  }
+
+  .form-textarea {
+    @apply form-field resize-y;
+  }
+
+  .tab-pill {
+    @apply rounded-full px-4 py-2 text-sm font-medium whitespace-nowrap;
+  }
+
+  .tab-pill-active {
+    @apply bg-slate-900 text-white;
+  }
+
+  .tab-pill-inactive {
+    @apply bg-slate-100 text-slate-600 hover:text-slate-900;
+  }
+
+  .segment-control {
+    @apply flex rounded-lg bg-slate-100 p-1;
+  }
+
+  .segment-option {
+    @apply rounded-md px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-colors;
+  }
+
+  .segment-option-active {
+    @apply bg-white text-slate-900 shadow-sm;
+  }
+
+  .segment-option-inactive {
+    @apply text-slate-600 hover:text-slate-900;
+  }
+
+  .listing-card {
+    @apply h-full cursor-pointer flex-col p-6 transition-all hover:border-blue-300 hover:shadow-md;
+  }
+
+  .compact-listing-card {
+    @apply cursor-pointer p-5 transition-colors hover:border-blue-300;
+  }
+
+  .tech-pill {
+    @apply rounded-md bg-slate-100 px-2 py-1 text-xs font-medium text-slate-600;
+  }
+
+  .member-count-badge {
+    @apply flex items-center gap-1 rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-600;
+  }
+
+  .section-step {
+    @apply flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-sm text-blue-600;
+  }
+
+  .empty-state {
+    @apply rounded-2xl border border-dashed border-slate-200 bg-slate-50 p-8 text-center text-slate-500;
+  }
+}
+
+/* Custom Scrollbar for a polished look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}

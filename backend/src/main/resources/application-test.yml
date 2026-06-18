@@ -1,0 +1,15 @@
+app:
+  jwt:
+    secret: "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  frontend-url: "http://localhost:3000"
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: "dummy-client-id"
+            client-secret: "dummy-client-secret"
+            scope:
+              - profile
+              - email

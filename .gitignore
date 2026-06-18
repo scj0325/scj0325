@@ -1,0 +1,95 @@
+# ==========================================
+# Common
+# ==========================================
+
+.DS_Store
+Thumbs.db
+
+*.log
+logs/
+
+*.tmp
+*.temp
+*.swp
+*~
+
+# ==========================================
+# Environment
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Frontend (Next.js)
+# ==========================================
+
+frontend/node_modules/
+
+frontend/.next/
+frontend/out/
+
+frontend/coverage/
+
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+frontend/*.tsbuildinfo
+frontend/next-env.d.ts
+
+frontend/.vercel/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ==========================================
+# Backend (Spring Boot)
+# ==========================================
+
+backend/.gradle/
+backend/.local-jdk/
+backend/build/
+backend/out/
+
+backend/*.mv.db
+backend/*.trace.db
+backend/*.h2.db
+
+backend/src/main/resources/application-local.yml
+backend/src/main/resources/application-prod.yml
+backend/src/main/resources/application-secret.yml
+backend/src/main/resources/application-oauth.yml
+
+# ==========================================
+# IDE
+# ==========================================
+
+.idea/
+*.iml
+*.ipr
+*.iws
+
+.vscode/
+
+.project
+.classpath
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# ==========================================
+# Certificates
+# ==========================================
+
+*.pem
+*.key
+*.jks
+*.keystore
+*.p12
+
+package-lock.json

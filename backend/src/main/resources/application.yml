@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: local
+    group:
+      local: secret, oauth
+      dev: secret, oauth
+
+server:
+  port: 8080

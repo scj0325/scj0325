@@ -1,0 +1,41 @@
+{
+  "name": "magic-patterns-vite-template",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write . --ignore-path .prettierignore",
+    "tsc": "tsc --noEmit",
+    "check": "npm run format && npm run tsc && npm run lint"
+  },
+  "dependencies": {
+    "clsx": "latest",
+    "framer-motion": "^11.5.4",
+    "lucide-react": "0.522.0",
+    "next": "latest",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.17.0",
+    "sonner": "^2.0.1",
+    "tailwind-merge": "latest"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^20.11.18",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "autoprefixer": "latest",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "prettier": "^3.8.4",
+    "tailwindcss": "3.4.17",
+    "typescript": "^5.5.4"
+  }
+}
